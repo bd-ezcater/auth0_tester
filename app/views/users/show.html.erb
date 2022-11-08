@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Show user</h1>
+  <p style="color: green"><%= notice %></p>
+  <%= render @user %>
+  <div>
+    <p>
+    <table class="table">
+      <colgroup>
+        <col class="col-md-1">
+        <col class="col-md-8">
+        <col class="col-md-2">
+      </colgroup>
+      <tbody>
+        <tr>
+          <td><%= link_to "Edit user", edit_user_path(@user), class:"btn btn-secondary" %></td>
+          <td><%= link_to "Back to users", users_path, class:"btn btn-secondary" %></td>
+          <td><%= button_to "Destroy user", @user, method: :delete, class:"btn btn-danger" %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

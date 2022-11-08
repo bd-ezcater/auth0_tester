@@ -1,0 +1,79 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="table table-sm w-auto">
+    <colgroup>
+      <col class="col-md-1">
+      <col class="col-md-9">
+    </colgroup>
+
+    <tbody>
+      <tr>
+        <td><%= form.label :userid, style: "display: block" %></td>
+        <td><%= form.number_field :userid %></td>
+      </tr>
+
+      <tr>
+        <td><%= form.label :first_name, style: "display: block" %></td>
+        <td><%= form.text_field :first_name %></td>
+      </tr>
+
+      <tr>
+        <td><%= form.label :last_name, style: "display: block" %></td>
+        <td><%= form.text_field :last_name %></td>
+      </tr>
+
+      <tr>
+        <td><%= form.label :nickname, style: "display: block" %></td>
+        <td><%= form.text_field :nickname %></td>
+      </tr>
+
+      <tr>
+        <td><%= form.label :username, style: "display: block" %></td>
+        <td><%= form.text_field :username %></td>
+      </tr>
+
+      <tr>
+        <td><%= form.label :password, style: "display: block" %></td>
+        <td><%= form.text_field :password %></td>
+      </tr>
+
+      <tr>
+        <td><%= form.label :email, style: "display: block" %></td>
+        <td><%= form.text_field :email %></td>
+      </tr>
+
+      <tr>
+        <td><%= form.label :email_verified, style: "display: block" %></td>
+        <td><%= form.check_box :email_verified %></td>
+      </tr>
+
+      <tr>
+        <td><%= form.label :phone, style: "display: block" %></td>
+        <td><%= form.text_field :phone %></td>
+      </tr>
+
+      <tr>
+        <td><%= form.label :picture_url, style: "display: block" %></td>
+        <td><%= form.text_area :picture_url %></td>
+      </tr>
+
+      <tr>
+        <td><%= form.submit %></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+<% end %>

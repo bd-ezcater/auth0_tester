@@ -1,0 +1,13 @@
+<section class="jumbotron text-center">
+<!--
+    <h2><img class="jumbo-thumbnail" src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg"></h2>
+    <h2><img class="jumbo-thumbnail" src="https://ibb.co/kcN4829"></h2>
+    <h2><img class="jumbo-thumbnail" src="https://www.dropbox.com/s/065vvl2u11e3ydn/ezCater_logo.png?dl=0"></h2>
+    <h2><img class="jumbo-thumbnail" src="https://cdn.pixabay.com/photo/2019/06/26/14/14/boron-4300486_640.png"></h2>
+    <h2><img class="jumbo-thumbnail" src="https://mma.prnewswire.com/media/1333269/ezCater_Logo.jpg?p=facebook"></h2>
+
+    <h1>RoR Auth0 Sample</h1>
+-->
+  <h2><img src="https://mma.prnewswire.com/media/1333269/ezCater_Logo.jpg?p=facebook" width=200 height=100></h2>
+  <%= button_to 'Login', '/auth/auth0', method: :post, class: 'btn btn-success btn-lg', id: 'qsLoginBtn' unless session[:userinfo].present? %>
+</section>

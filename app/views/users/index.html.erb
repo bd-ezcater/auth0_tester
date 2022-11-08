@@ -1,0 +1,40 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <h1>Users</h1>
+  <table class="table table-striped table-hover table-bordered table-sm">
+    <colgroup>
+      <col class="col-md-1">
+      <col class="col-md-1">
+      <col class="col-md-1">
+      <col class="col-md-1">
+      <col class="col-md-4">
+      <col class="col-md-1">
+    </colgroup>
+    <thead class="table-primary">
+      <tr>
+        <th scope="col">User Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email</th>
+        <th scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.userid %></td>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= user.username %></td>
+          <td><%= user.email %></td>
+          <td><%= link_to "Details", user %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <p>
+    <%= link_to "New user", new_user_path, class:"btn btn-primary" %>
+  </p>
+</div>
